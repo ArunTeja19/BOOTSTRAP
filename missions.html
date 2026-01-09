@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions Dashboard | COSMOS Portal - Unique Experience</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body{ 
+            background-color: #0d0d1a; 
+            color: #f0f0f0; 
+        }
+        .bg-rich-dark{ 
+            background-color: #0d0d1a !important; 
+        }
+        .card-hover-lift {
+            transition: transform 0.4s, box-shadow 0.4s ease;
+        }
+        .card-hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 1rem 3rem rgba(0, 255, 255, 0.3) !important;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 3px solid #333;
+            margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #0d6efd;
+            border: 3px solid #0d0d1a;
+        }
+        .timeline-item.active::before {
+            background-color: #198754;
+            border: 3px solid #ffc107; 
+        }
+        .timeline-content {
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #333;
+        }
+    </style>
+</head>
+<body class="bg-rich-dark">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-lg">
+            <div class="container-fluid container-xl">
+                <a class="navbar-brand fw-bolder text-info" href="index.html" data-aos="fade-right" data-aos-duration="1500">🔭 COSMOS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="50"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="150"><a class="nav-link" href="solar-system.html">Solar System</a></li>
+                        <li class="nav-item dropdown" data-aos="fade-down" data-aos-delay="250">
+                            <a class="nav-link dropdown-toggle active text-warning" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">Exploration</a>
+                            <ul class="dropdown-menu dropdown-menu-dark bg-dark" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="stars-galaxies.html">Stars & Galaxies</a></li>
+                                <li><a class="dropdown-item active text-warning bg-transparent border-0" href="missions.html">Missions Dashboard</a></li>
+                                <li><a class="dropdown-item" href="rockets.html">Rockets & Spacecraft</a></li>
+                                <li><a class="dropdown-item" href="astronauts.html">Astronauts & Scientists</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="technology.html">Space Technology</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="350"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="p-5 text-center bg-dark text-white border-bottom border-info">
+        <div class="container" data-aos="fade-down" data-aos-duration="1000">
+            <h1 class="display-4 fw-light text-info mb-3"><i class="fas fa-satellite-dish me-3"></i> Global Mission Control</h1>
+            <p class="lead text-white-50">Tracking the progress, status, and historical data of all major space exploration programs.</p>
+        </div>
+    </section>
+
+    <section id="status-overview" class="py-5 bg-rich-dark">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold text-warning" data-aos="flip-down">System Status: Orbital Integrity</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-3" data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-out-back">
+                    <div class="card bg-black border-success card-hover-lift h-100 shadow-lg p-3">
+                        <i class="fas fa-check-circle display-5 mb-2 text-success"></i>
+                        <p class="h5 card-title text-success fw-bold">Success Rate</p>
+                        <p class="display-5 fw-bolder text-light mb-2">85%</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3" data-aos="zoom-in-up" data-aos-delay="400" data-aos-easing="ease-out-back">
+                    <div class="card bg-black border-info card-hover-lift h-100 shadow-lg p-3">
+                        <i class="fas fa-rocket display-5 mb-2 text-info"></i>
+                        <p class="h5 card-title text-info fw-bold">Active Missions</p>
+                        <p class="display-5 fw-bolder text-light mb-2">10</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3" data-aos="fade-left" data-aos-delay="600" data-aos-easing="ease-out-back">
+                    <div class="card bg-black border-warning card-hover-lift h-100 shadow-lg p-3">
+                        <i class="fas fa-calendar-alt display-5 mb-2 text-warning"></i>
+                        <p class="h5 card-title text-warning fw-bold">Missions Scheduled</p>
+                        <p class="display-5 fw-bolder text-light mb-2">25</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3" data-aos="zoom-in-down" data-aos-delay="800" data-aos-easing="ease-out-back">
+                    <div class="card bg-black border-danger card-hover-lift h-100 shadow-lg p-3">
+                        <i class="fas fa-user-astronaut display-5 mb-2 text-danger"></i>
+                        <p class="h5 card-title text-danger fw-bold">Crewed Programs</p>
+                        <p class="display-5 fw-bolder text-light mb-2">3</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5" data-aos="fade-up" data-aos-delay="1000">
+                <div class="col-12">
+                    <h5 class="text-white-50 mb-3">High Priority Target Funding Progress</h5>
+                    <div class="progress shadow-lg" style="height: 30px;">
+                        <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Mars Colonization (75%)</div>
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Lunar Gateway (15%)</div>
+                        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">Europa Lander (10%)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission-timeline" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold text-info" data-aos="fade-down">Key Mission Milestones</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="timeline-item text-white-50" data-aos="fade-right" data-aos-delay="200">
+                        <div class="timeline-content">
+                            <h4 class="text-secondary fw-bold">Voyager 1 Launch</h4>
+                            <p class="mb-1">September 5, 1977 | NASA</p>
+                            <span class="badge bg-secondary">Completed</span>
+                            <p class="mt-2">First spacecraft to provide detailed images of Jupiter and Saturn's moons; now in interstellar space.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item text-white-50" data-aos="fade-left" data-aos-delay="400">
+                        <div class="timeline-content">
+                            <h4 class="text-success fw-bold">OSIRIS-REx Sample Return</h4>
+                            <p class="mb-1">September 24, 2023 | NASA</p>
+                            <span class="badge bg-success">Success</span>
+                            <p class="mt-2">Successfully delivered samples from asteroid Bennu, marking the USA's first asteroid sample return mission.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item active text-white" data-aos="fade-right" data-aos-delay="600">
+                        <div class="timeline-content">
+                            <h4 class="text-warning fw-bold">JWST Primary Science Operations</h4>
+                            <p class="mb-1">Ongoing since July 2022 | NASA/ESA/CSA</p>
+                            <span class="badge bg-info">Active</span>
+                            <p class="mt-2">The world's premier space observatory continues to revolutionize cosmology and exoplanet research.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item text-white-50" data-aos="fade-left" data-aos-delay="800">
+                        <div class="timeline-content">
+                            <h4 class="text-warning fw-bold">Artemis III Crewed Lunar Landing</h4>
+                            <p class="mb-1">Target: Q4 2026 | NASA</p>
+                            <span class="badge bg-warning">Planned</span>
+                            <p class="mt-2">First mission to land humans on the Moon since Apollo 17, focusing on the lunar south pole.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item text-white-50" data-aos="fade-right" data-aos-delay="1000" style="border-left: none;">
+                        <div class="timeline-content">
+                            <h4 class="text-danger fw-bold">Mars Human Habitat Deployment</h4>
+                            <p class="mb-1">Target: ~2035 | Various Agencies</p>
+                            <span class="badge bg-danger">Long-Term Goal</span>
+                            <p class="mt-2">Conceptual and initial planning stages for sustained human presence on Mars.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-black text-white pt-5 pb-2 border-top border-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4" data-aos="fade-right" data-aos-delay="100">
+                    <h5 class="text-warning">COSMOS Portal</h5>
+                    <p class="text-white-50 fw-light">Your gateway to structured, professional data on the past, present, and future of space exploration.</p>
+                </div>
+                
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <h5 class="text-info">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-white-50 card-hover-lift">Home</a></li>
+                        <li><a href="solar-system.html" class="text-decoration-none text-white-50 card-hover-lift">Solar System</a></li>
+                        <li><a href="missions.html" class="text-decoration-none text-white-50 card-hover-lift">Missions Dashboard</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <h5 class="text-success">Deep Space</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="stars-galaxies.html" class="text-decoration-none text-white-50 card-hover-lift">Stars & Galaxies</a></li>
+                        <li><a href="technology.html" class="text-decoration-none text-white-50 card-hover-lift">Space Technology</a></li>
+                        <li><a href="astronauts.html" class="text-decoration-none text-white-50 card-hover-lift">Astronaut Profiles</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-4" data-aos="fade-left" data-aos-delay="700">
+                    <h5 class="text-danger">Get in Touch</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt text-white-50 me-2"></i> Hyderabad, India</li>
+                        <li><i class="fas fa-envelope text-white-50 me-2"></i> arunofficial369@gmail.com</li>
+                        <li><i class="fas fa-phone-alt text-white-50 me-2"></i> +91 9346779890</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row border-top border-secondary pt-3 mt-3">
+                <div class="col text-center">
+                    <p class="text-white-50 mb-0" data-aos="zoom-in" data-aos-anchor-placement="top-bottom">&copy; 2024 COSMOS Portal. Built with Bootstrap 5 and AOS.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1200, 
+            once: false,    
+            delay: 50,     
+            easing: 'ease-out-cubic' 
+        });
+    </script>
+</body>
+</html>

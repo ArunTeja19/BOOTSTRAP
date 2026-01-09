@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronauts & Scientists | COSMOS Portal - Unique Profiles (Simplified)</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body{ 
+            background-color: #080816; 
+            color: #f0f0f0; 
+        }
+        .bg-rich-dark{
+            background-color: #080816 !important; 
+        }
+        .bg-component-base{ 
+            background-color: #151525 !important; 
+        }
+        .card-hover-lift {
+            transition: transform 0.5s ease-out, box-shadow 0.5s ease;
+        }
+        .card-hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.6) !important;
+        }
+        .mission-scroll-container {
+            overflow-x:scroll;
+            white-space: nowrap;
+            padding: 2rem;
+            border-bottom: 3px solid #1a1a30;
+        }
+        .mission-scroll-container::-webkit-scrollbar{
+            width: 10px;
+            height: 3px;
+        }
+        .mission-scroll-container::-webkit-scrollbar-thumb{
+            background-color: rgba(128, 128, 128,0.5);
+            border-radius: 40px;
+        }
+        .mission-card {
+            display: inline-block;
+            width: 280px;
+            margin-right: 1.5rem;
+        }
+        .card-text{
+            color: rgba(240, 240, 240,0.8);
+        }
+        .profile-img-lg {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 4px solid #FFD700;
+        }
+        .profile-list-item {
+            background-color: #151525;
+            border-bottom: 1px solid #333;
+            color: #f0f0f0;
+        }
+        .profile-list-item:hover {
+            background-color: #252535;
+        }
+        .bg-accent-gold{ 
+            background-color: #FFD700 !important;
+            color: #080816 !important; 
+        }
+        .text-accent-gold{ 
+            color: #FFD700 !important;
+        }
+        .text-primary-aqua{ 
+            color: #00FFFF !important; 
+        }
+        .bg-status-lime{ 
+            background-color: #32CD32 !important; 
+        }
+        .text-status-lime { 
+            color: #32CD32 !important; 
+        }
+    </style>
+</head>
+<body class="bg-rich-dark">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-lg">
+            <div class="container-fluid container-xl">
+                <a class="navbar-brand fw-bolder text-info" href="index.html" data-aos="fade-right" data-aos-duration="1500">🔭 COSMOS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="50"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="150"><a class="nav-link" href="solar-system.html">Solar System</a></li>
+                        <li class="nav-item dropdown" data-aos="fade-down" data-aos-delay="250">
+                            <a class="nav-link dropdown-toggle active text-warning" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">Exploration</a>
+                            <ul class="dropdown-menu dropdown-menu-dark bg-dark" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="stars-galaxies.html">Stars & Galaxies</a></li>
+                                <li><a class="dropdown-item" href="missions.html">Missions Dashboard</a></li>
+                                <li><a class="dropdown-item" href="rockets.html">Rockets & Spacecraft</a></li>
+                                <li><a class="dropdown-item active text-warning bg-transparent border-0" href="astronauts.html">Astronauts & Scientists</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="technology.html">Space Technology</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="350"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="p-5 text-center bg-dark text-white border-bottom" style="border-color: #00FFFF !important;">
+        <div class="container" data-aos="fade-zoom-in" data-aos-duration="1500">
+            <h1 class="display-3 fw-light text-primary-aqua"><i class="fas fa-user-tie me-3"></i> The Human Element Archive</h1>
+            <p class="lead text-white-50">Celebrating the pioneers and experts driving humanity's reach beyond Earth.</p>
+        </div>
+    </section>
+
+    <section id="pioneers" class="py-5 bg-rich-dark">
+        <div class="container">
+            <h2 class="mb-4 fw-bold text-accent-gold" data-aos="fade-up">Historical Pioneers (Swipe to View)</h2>
+            <p class="text-white-50 mb-4" data-aos="fade-up" data-aos-delay="200">The heroes who first breached the atmosphere and stepped onto new worlds.</p>
+            <div class="mission-scroll-container shadow-lg" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1500">
+                <div class="mission-card card bg-component-base border-secondary card-hover-lift">
+                    <div class="card-body text-center">
+                        <img src="IMAGES/ASTRONAUTS/Yuri Gagarin.jpg" class="rounded-circle mb-3 profile-img-lg" alt="Yuri Gagarin">
+                        <h5 class="card-title text-light fw-bold">Yuri Gagarin</h5>
+                        <p class="text-white-50">First Human in Space</p>
+                        <span class="badge bg-danger">Vostok 1</span>
+                    </div>
+                </div>
+
+                <div class="mission-card card bg-component-base border-secondary card-hover-lift">
+                    <div class="card-body text-center">
+                        <img src="IMAGES/ASTRONAUTS/Neil Armstrong.jpg" class="rounded-circle mb-3 profile-img-lg" alt="Neil Armstrong">
+                        <h5 class="card-title text-light fw-bold">Neil Armstrong</h5>
+                        <p class="text-white-50">First Human on the Moon</p>
+                        <span class="badge bg-info">Apollo 11</span>
+                    </div>
+                </div>
+
+                <div class="mission-card card bg-component-base border-secondary card-hover-lift">
+                    <div class="card-body text-center">
+                        <img src="IMAGES/ASTRONAUTS/V Tereshkova.avif" class="rounded-circle mb-3 profile-img-lg" alt="Valentina Tereshkova">
+                        <h5 class="card-title text-light fw-bold">V. Tereshkova</h5>
+                        <p class="text-white-50">First Woman in Space</p>
+                        <span class="badge bg-danger">Vostok 6</span>
+                    </div>
+                </div>
+
+                <div class="mission-card card bg-component-base border-secondary card-hover-lift">
+                    <div class="card-body text-center">
+                        <img src="IMAGES/ASTRONAUTS/Kalpana Chawla.jpg" class="rounded-circle mb-3 profile-img-lg" alt="Kalpana Chawla">
+                        <h5 class="card-title text-light fw-bold">Kalpana Chawla</h5>
+                        <p class="text-white-50">First Indian in Space</p>
+                        <span class="badge bg-status-lime">STS-87</span>
+                    </div>
+                </div>
+
+                <div class="mission-card card bg-component-base border-secondary card-hover-lift">
+                    <div class="card-body text-center">
+                        <img src="IMAGES/ASTRONAUTS/Alexei Leonov.avif" class="rounded-circle mb-3 profile-img-lg" alt="Alexei Leonov">
+                        <h5 class="card-title text-light fw-bold">Alexei Leonov</h5>
+                        <p class="text-white-50">First human to do a Spacewalk</p>
+                        <span class="badge bg-warning">Voskhod 2</span>
+                    </div>
+                </div>
+
+                <div class="mission-card card bg-component-base border-secondary card-hover-lift">
+                    <div class="card-body text-center">
+                        <img src="IMAGES/ASTRONAUTS/John Glenn.webp" class="rounded-circle mb-3 profile-img-lg" alt="John Glenn">
+                        <h5 class="card-title text-light fw-bold">John Glenn</h5>
+                        <p class="text-white-50">First Human to Orbit the Earth</p>
+                        <span class="badge bg-info">Friendship 7</span>
+                    </div>
+                </div>
+
+                <div class="mission-card card bg-component-base border-secondary card-hover-lift">
+                    <div class="card-body text-center">
+                        <img src="IMAGES/ASTRONAUTS/Sunita Williams.webp" class="rounded-circle mb-3 profile-img-lg" alt="Sunita Williams">
+                        <h5 class="card-title text-light fw-bold">Sunita Williams</h5>
+                        <p class="text-white-50">First Woman to Command the ISS</p>
+                        <span class="badge bg-primary">Expedition 33</span>
+                    </div>
+                </div>
+
+                <div class="mission-card card bg-component-base border-secondary card-hover-lift">
+                    <div class="card-body text-center">
+                        <img src="IMAGES/ASTRONAUTS/Sally Ride.jpg" class="rounded-circle mb-3 profile-img-lg" alt="Sally Ride">
+                        <h5 class="card-title text-light fw-bold">Sally Ride</h5>
+                        <p class="text-white-50">First Woman in Space</p>
+                        <span class="badge bg-danger">STS-7</span>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <section id="active-profiles" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold text-primary-aqua" data-aos="fade-down">Active Flight Personnel</h2>
+            
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-12" data-aos="fade-up-right" data-aos-delay="200" data-aos-duration="1800">
+                    <div class="card bg-component-base border-info card-hover-lift shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-3 text-center p-3">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h4 class="card-title fw-bold mb-1 text-primary-aqua">Commander J. Williams</h4>
+                                    <p class="text-white-50 mb-2"><span class="badge bg-accent-gold">NASA</span> | Mission Specialist | Artemis Program</p>
+                                    <p class="card-text">Williams is a veteran of two long-duration ISS missions, specializing in extravehicular activity (EVA) and robotics operations. Currently training for deep-space transit.</p>
+                                    <ul class="list-group list-group-horizontal-md mt-3">
+                                        <li class="list-group-item profile-list-item">Total Missions: <span class="fw-bold text-primary-aqua">2</span></li>
+                                        <li class="list-group-item profile-list-item">EVA Hours: <span class="fw-bold text-primary-aqua">45h 30m</span></li>
+                                        <li class="list-group-item profile-list-item">Field: <span class="fw-bold text-primary-aqua">Robotics Engineering</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12" data-aos="fade-up-left" data-aos-delay="500" data-aos-duration="1800">
+                    <div class="card bg-component-base border-success card-hover-lift shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-3 order-md-2 text-center p-3">
+                            </div>
+                            <div class="col-md-9 order-md-1">
+                                <div class="card-body text-end text-md-start">
+                                    <h4 class="card-title fw-bold mb-1 text-status-lime">Dr. E. Schmidt</h4>
+                                    <p class="text-white-50 mb-2"><span class="badge bg-info me-2">ESA</span> | Flight Engineer | ISS Expedition 68</p>
+                                    <p class="card-text">A microbiologist and physicist, Dr. Schmidt led critical European experiments on plant growth in microgravity. Her next role focuses on lunar habitat design.</p>
+                                    <ul class="list-group list-group-horizontal-md mt-3 justify-content-end justify-content-md-start">
+                                        <li class="list-group-item profile-list-item">Total Missions: <span class="fw-bold text-status-lime">1</span></li>
+                                        <li class="list-group-item profile-list-item">Time in Space: <span class="fw-bold text-status-lime">186 days</span></li>
+                                        <li class="list-group-item profile-list-item">Field: <span class="fw-bold text-status-lime">Microbiology</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12" data-aos="fade-up-right" data-aos-delay="800" data-aos-duration="1800">
+                    <div class="card bg-component-base border-warning card-hover-lift shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-3 text-center p-3">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h4 class="card-title fw-bold mb-1 text-accent-gold">Colonel M. Tanaka</h4>
+                                    <p class="text-white-50 mb-2"><span class="badge bg-danger me-2">JAXA</span> | Spacecraft Pilot | Commercial Crew</p>
+                                    <p class="card-text">Colonel Tanaka is a former fighter pilot, selected for his expertise in high-G maneuvers and complex docking procedures required for the new generation of commercial spacecraft.</p>
+                                    <ul class="list-group list-group-horizontal-md mt-3">
+                                        <li class="list-group-item profile-list-item">Total Missions: <span class="fw-bold text-accent-gold">1</span></li>
+                                        <li class="list-group-item profile-list-item">Time in Space: <span class="fw-bold text-accent-gold">180 days</span></li>
+                                        <li class="list-group-item profile-list-item">Field: <span class="fw-bold text-accent-gold">Aeronautical Engineering</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12" data-aos="fade-up-left" data-aos-delay="1100" data-aos-duration="1800">
+                    <div class="card bg-component-base border-danger card-hover-lift shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-3 order-md-2 text-center p-3">
+                            </div>
+                            <div class="col-md-9 order-md-1">
+                                <div class="card-body text-end text-md-start">
+                                    <h4 class="card-title fw-bold mb-1 text-danger">Dr. A. Al-Mansoori</h4>
+                                    <p class="text-white-50 mb-2"><span class="badge bg-secondary me-2">UAE</span> | Lunar Geologist | ISS Visiting Crew</p>
+                                    <p class="card-text">Dr. Al-Mansoori is a leading expert in planetary geology, selected for her knowledge of regolith and resource utilization critical for future lunar bases.</p>
+                                    <ul class="list-group list-group-horizontal-md mt-3 justify-content-end justify-content-md-start">
+                                        <li class="list-group-item profile-list-item">Total Missions: <span class="fw-bold text-danger">1</span></li>
+                                        <li class="list-group-item profile-list-item">Time in Space: <span class="fw-bold text-danger">8 days</span></li>
+                                        <li class="list-group-item profile-list-item">Field: <span class="fw-bold text-danger">Planetary Geology</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12" data-aos="fade-up-right" data-aos-delay="1400" data-aos-duration="1800">
+                    <div class="card bg-component-base border-info card-hover-lift shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-3 text-center p-3">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h4 class="card-title fw-bold mb-1 text-primary-aqua">Dr. S. K. Singh</h4>
+                                    <p class="text-white-50 mb-2"><span class="badge bg-success me-2">ISRO</span> | Flight Surgeon | Gaganyaan Program</p>
+                                    <p class="card-text">A decorated flight surgeon selected by ISRO to manage life support and microgravity health effects for India's upcoming crewed program.</p>
+                                    <ul class="list-group list-group-horizontal-md mt-3">
+                                        <li class="list-group-item profile-list-item">Total Missions: <span class="fw-bold text-primary-aqua">0 (Assigned)</span></li>
+                                        <li class="list-group-item profile-list-item">Time in Space: <span class="fw-bold text-primary-aqua">0 days</span></li>
+                                        <li class="list-group-item profile-list-item">Field: <span class="fw-bold text-primary-aqua">Aerospace Medicine</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12" data-aos="fade-up-left" data-aos-delay="1700" data-aos-duration="1800">
+                    <div class="card bg-component-base border-secondary card-hover-lift shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-3 order-md-2 text-center p-3"></div>
+                            <div class="col-md-9 order-md-1">
+                                <div class="card-body text-end text-md-start">
+                                    <h4 class="card-title fw-bold mb-1 text-secondary">A. Y. Tereshkov</h4>
+                                    <p class="text-white-50 mb-2"><span class="badge bg-danger me-2">Roscosmos</span> | Test Engineer | ISS Ops</p>
+                                    <p class="card-text">Tereshkov is a highly experienced test engineer responsible for validating hardware and operational procedures prior to flight, supporting both Soyuz and Dragon missions.</p>
+                                    <ul class="list-group list-group-horizontal-md mt-3 justify-content-end justify-content-md-start">
+                                        <li class="list-group-item profile-list-item">Total Missions: <span class="fw-bold text-secondary">1 (Crew)</span></li>
+                                        <li class="list-group-item profile-list-item">Time in Space: <span class="fw-bold text-secondary">167 days</span></li>
+                                        <li class="list-group-item profile-list-item">Field: <span class="fw-bold text-secondary">Test Engineering</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="training-pipeline" class="py-5 bg-rich-dark border-top" style="border-color: #151525 !important;">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold text-accent-gold" data-aos="fade-down">Astronaut Training Pipeline & Readiness Status</h2>
+            <div class="accordion" id="trainingAccordion" data-aos="fade-up" data-aos-delay="300">
+                
+                <div class="accordion-item shadow-lg border-warning">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button bg-component-base text-white-50 collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTraining" aria-expanded="false" aria-controls="collapseTraining">
+                            <i class="fas fa-chart-bar me-3 text-accent-gold"></i> View Detailed Training Module Completion
+                        </button>
+                    </h2>
+                    <div id="collapseTraining" class="accordion-collapse collapse" data-bs-parent="#trainingAccordion">
+                        <div class="accordion-body bg-black text-white-50 border-bottom border-warning p-0"> 
+                            <div class="table-responsive">
+                                <table class="table table-dark table-striped table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Module</th>
+                                            <th>Commander J. Williams</th>
+                                            <th>Dr. E. Schmidt</th>
+                                            <th>Dr. S. K. Singh</th>
+                                            <th>Col. M. Tanaka</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>EVA Robotics Certification</td>
+                                            <td class="text-success"><i class="fas fa-check"></i> 100%</td>
+                                            <td class="text-warning"><i class="fas fa-hourglass-half"></i> 75%</td>
+                                            <td class="text-danger"><i class="fas fa-times"></i> N/A</td>
+                                            <td class="text-success"><i class="fas fa-check"></i> 100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Soyuz/Crew Dragon Systems</td>
+                                            <td class="text-success"><i class="fas fa-check"></i> 100%</td>
+                                            <td class="text-success"><i class="fas fa-check"></i> 100%</td>
+                                            <td class="text-warning"><i class="fas fa-hourglass-half"></i> 50%</td>
+                                            <td class="text-success"><i class="fas fa-check"></i> 100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lunar Geology Ops</td>
+                                            <td class="text-warning"><i class="fas fa-hourglass-half"></i> 50%</td>
+                                            <td class="text-success"><i class="fas fa-check"></i> 100%</td>
+                                            <td class="text-danger"><i class="fas fa-times"></i> N/A</td>
+                                            <td class="text-warning"><i class="fas fa-hourglass-half"></i> 25%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="patch-showcase" class="py-5 bg-dark border-top" style="border-color: #151525 !important;">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold text-accent-gold" data-aos="fade-down">Symbolism & Mission Patches</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card bg-component-base border-info card-hover-lift shadow-lg text-center p-3">
+                        <img src="IMAGES/ASTRONAUTS/Apollo 11.jpg" class="img-fluid mb-2 mx-auto" style="width: 200px; height: 100px;" alt="Apollo 11 Patch">
+                        <h5 class="text-light fw-bold">Apollo 11</h5>
+                        <span class="badge bg-info">Lunar Landing</span>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card bg-component-base border-success card-hover-lift shadow-lg text-center p-3">
+                        <img src="IMAGES/ASTRONAUTS/sts 1.webp" class="img-fluid mb-2 mx-auto" style="width: 200px; height: 100px;" alt="STS-1 Patch">
+                        <h5 class="text-light fw-bold">STS-1</h5>
+                        <span class="badge bg-status-lime">First Shuttle Flight</span>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="card bg-component-base border-warning card-hover-lift shadow-lg text-center p-3">
+                        <img src="IMAGES/ASTRONAUTS/Artemis 1.jpg" class="img-fluid mb-2 mx-auto" style="width: 200px; height: 100px;" alt="Artemis I Patch">
+                        <h5 class="text-light fw-bold">Artemis I</h5>
+                        <span class="badge bg-warning">Return to Moon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scientists" class="py-5 bg-rich-dark">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold text-primary-aqua" data-aos="fade-down">Ground Control & Scientific Leadership</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1200">
+                    <div class="card bg-component-base border-success card-hover-lift shadow-lg">
+                        <div class="card-header bg-dark fw-bold text-status-lime">Dr. Lena Voss | Astrobiologist</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item profile-list-item"><i class="fas fa-flask me-2 text-status-lime"></i> Focus: Search for biosignatures on Europa.</li>
+                            <li class="list-group-item profile-list-item"><i class="fas fa-university me-2 text-status-lime"></i> Current Program: Europa Clipper Mission.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1200">
+                    <div class="card bg-component-base border-info card-hover-lift shadow-lg">
+                        <div class="card-header bg-dark fw-bold text-primary-aqua">Prof. Kenji Sato | Propulsion Systems</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item profile-list-item"><i class="fas fa-cogs me-2 text-primary-aqua"></i> Focus: Development of fusion-powered propulsion.</li>
+                            <li class="list-group-item profile-list-item"><i class="fas fa-university me-2 text-primary-aqua"></i> Current Program: Advanced Planetary Transit Systems.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white pt-5 pb-2 border-top border-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4" data-aos="fade-right" data-aos-delay="100">
+                    <h5 class="text-warning">COSMOS Portal</h5>
+                    <p class="text-white-50 fw-light">Your gateway to structured, professional data on the past, present, and future of space exploration.</p>
+                </div>
+                
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <h5 class="text-info">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-white-50 card-hover-lift">Home</a></li>
+                        <li><a href="solar-system.html" class="text-decoration-none text-white-50 card-hover-lift">Solar System</a></li>
+                        <li><a href="missions.html" class="text-decoration-none text-white-50 card-hover-lift">Missions Dashboard</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <h5 class="text-success">Deep Space</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="stars-galaxies.html" class="text-decoration-none text-white-50 card-hover-lift">Stars & Galaxies</a></li>
+                        <li><a href="technology.html" class="text-decoration-none text-white-50 card-hover-lift">Space Technology</a></li>
+                        <li><a href="astronauts.html" class="text-decoration-none text-white-50 card-hover-lift">Astronaut Profiles</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-4" data-aos="fade-left" data-aos-delay="700">
+                    <h5 class="text-danger">Get in Touch</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt text-white-50 me-2"></i> Hyderabad, India</li>
+                        <li><i class="fas fa-envelope text-white-50 me-2"></i> arunofficial369@gmail.com</li>
+                        <li><i class="fas fa-phone-alt text-white-50 me-2"></i> +91 9346779890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row border-top border-secondary pt-3 mt-3">
+                <div class="col text-center">
+                    <p class="text-white-50 mb-0" data-aos="zoom-in" data-aos-anchor-placement="top-bottom">&copy; 2024 COSMOS Portal. Built with Bootstrap 5 and AOS.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1800,
+            once: false,    
+            delay: 50,     
+            easing: 'ease-out-cubic' 
+        });
+    </script>
+</body>
+</html>
